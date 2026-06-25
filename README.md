@@ -1,18 +1,18 @@
-# Recipes Frontend
+# recipes-frontend-starter
 
-This is the starter for the **Frontend Integration** assignment. The components are already built — your job is to fill in the `fetch` calls that connect them to the `recipes-api` backend.
+This is the starter for the **Frontend Integration** assignment. The components are already built — your job is to fill in the `fetch` calls that connect them to your `recipes-api-starter` backend.
 
 ## Setup
 
 1. Fork this repository to your own GitHub account.
 2. Clone your fork locally: `git clone <your-fork-url>`
-3. `cd recipes-frontend`
+3. `cd recipes-frontend-starter`
 4. Install dependencies: `npm install`
 5. Start the dev server: `npm run dev`, then open the URL it gives you (probably `http://localhost:5173`)
 
 **Check it:** Your browser shows "Recipes" with an empty list, an "Add Recipe" form, and no console errors.
 
-Before you write any code, make sure your express `recipes-api` is running on `http://localhost:8080` in its own terminal — this frontend app has nothing to talk to without it.
+Before you write any code, make sure `recipes-api-starter` is running on `http://localhost:8080` in its own terminal — this app has nothing to talk to without it.
 
 ## What's Already Built
 
