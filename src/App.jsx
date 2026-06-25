@@ -15,14 +15,43 @@ export default function App() {
 
   useEffect(() => {
     // TODO (Part 1): fetch `${API_URL}/api/recipes`, convert the response to JSON, and setRecipes with it
+    const fetchRecipes = async () => {
+      const response = await fetch(`${API_URL}/api/recipes`);
+      const result = await response.json()
+      setRecipes(result)
+    };
+    fetchRecipes();
+
   }, [])
+
 
   function handleAddRecipe(newRecipe) {
     // TODO (Part 2): POST newRecipe to `${API_URL}/api/recipes`, then add the created recipe to `recipes`
+    const response = fetch(`${API_URL}/api/recipes`, {
+      method: 'POST', 
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newRecipe)
+
+
+
+    })
+
+    setRecipes(response.json)
+
   }
 
   function handleDeleteRecipe(id) {
     // TODO (Part 3): DELETE `${API_URL}/api/recipes/${id}`, then remove that recipe from `recipes`
+    const response = fetch(`${API_URL}/api/recipes/${id}`, {
+      method: 'DELETE'
+    });
+
+    const result = recipes.filter((recipe), result.id !== id);
+    setRecipes(result);
+    
+  
   }
 
   function handleToggleVegetarian(id) {
